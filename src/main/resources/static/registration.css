@@ -1,0 +1,52 @@
+body {
+	background-image: url("https://c1.wallpaperflare.com/preview/551/343/774/paper-print-music-melody-piano-sheet-music.jpg");
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+}
+form {
+  margin-top: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group input[type="radio"] {
+  margin-right: 10px;
+}
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #45a049;
+}

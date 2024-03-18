@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<html>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<style>
+		body{
+			background-image: url("https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg");
+			background-size: cover;
+            
+            width: 100%;
+			margin-left:600px;
+			color:white;
+			margin-top:100px;
+		}
+	</style>
+	<body>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Artist</th>
+					<th>Genre</th>
+					<th>Play</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each=songs:${songs}>
+					<td th:text="${songs.name}"></td>
+					<td th:text="${songs.artist}"></td>
+					<td th:text="${songs.genre}"></td>
+					
+					<td>
+					<audio controls>
+						<source th:src="${songs.link}">
+						
+					</audio>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

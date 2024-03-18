@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Insert title here</title>
+	</head>
+	<style>
+		body{
+			background-image: url("https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg");
+			background-size: cover;
+            
+            width: 100%;
+			margin-left:600px;
+			color:white;
+			margin-top:100px;
+		}
+	</style>
+	<body>
+		
+		<form action="addplaylist" method="post">
+			<label>PlayList Name:</label>
+			<input type="text">
+			<br>
+			<div th:each="song:${songs}">
+				<input type="checkbox" th:name="songs" th:value="${song.id}">
+				<label th:text="${song.name}"></label>
+			</div>
+			<input type="submit" value="ADD PLAYLIST">
+			
+		</form>
+	</body>
+</html>

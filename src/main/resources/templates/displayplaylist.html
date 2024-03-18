@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PlayList</title>
+<!--<link rel=stylesheet type=text/css th:href="@{/displayplaylist.css}">-->
+</head>
+<style>
+	body{
+		background-image: url("https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG11c2ljJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww");
+		background-size: cover;
+		background-position: center top;
+	}
+</style>
+<body>
+<table border="1">
+	<thead>
+		<tr> 
+			<th>ID</th>
+			<th>Name</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="all:${allplaylist}">
+			<td th:text="${all.id}"></td>
+			<td>
+				<ul>
+					<li th:each="song:${all.songs}">
+						<span th:text="${song.name}"></span>
+						<audio controls>
+							<source th:src="${song.link}">
+						</audio>
+						
+					</li>
+				</ul>
+			</td>
+			
+			
+			
+			
+		</tr>
+	
+	
+	
+	</tbody>
+</table>
+
+</body>
+</html>
